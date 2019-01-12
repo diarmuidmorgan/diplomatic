@@ -8,7 +8,7 @@ countries = {
     'irish channel' : ['ireland', 'england', 'scotland', 'wales']
 }
 
-
+## The cartographer puts the map together from the individual countries.
 class cartographer():
 
     def __init__(self, countries):
@@ -19,14 +19,17 @@ class cartographer():
         self.make_coords(countries)
         self.make_map(countries)
 
+    # Initialise the nodes
     def make_nodes(self, countries):
         for idx, i in enumerate(countries):
             self.nodes.append(node(i))
 
+    # Give them a position in an array
     def make_coords(self, countries):
         for idx, i in enumerate(countries):
             self.coords[i] = idx
 
+    # Link them all up
     def make_map(self, countries):
         for i in countries:
             for index, n in enumerate(self.nodes):
@@ -48,7 +51,7 @@ class node():
         self.is_occupi = False
         self.occupying_nation = None
 
-        self.links_to = []  # coords of neighbors (or just a 1D array?)
+        self.links_to = []  # Identity of neighbors
 
     def connect(self, coords):
         self.links_to.append(coords)
