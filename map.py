@@ -1,5 +1,5 @@
 import numpy as np
-import node
+from node import node
 countries = {
     'england': ['wales', 'irish channel', 'scotland'],
     'ireland': ['irish channel'],
