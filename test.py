@@ -77,7 +77,7 @@ def test_join_walkers_lovers_self(mini_map):
 
 
 def test_join_walker_and_country_home(mini_map):
-    assert "England" in mini_map.greg.home
+    assert mini_map.england in mini_map.greg.home
 
 
 def test_join_walker_and_country_citizens(mini_map):
